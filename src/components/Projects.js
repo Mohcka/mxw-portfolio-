@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Badge } from "react-bootstrap"
 import styled from "styled-components"
+import theme from "../theme"
 import Color from "color"
 
 import projectData from "../data/projects"
@@ -36,11 +37,17 @@ const Project = props => (
         <div className="project-tag">
           {props.projectInfo.tags.map((tag, i) => (
             <React.Fragment key={i}>
-              <a
-                href={tag.link}
-                style={{fontSize: "2em"}}
-                dangerouslySetInnerHTML={{ __html: tag.icon }}
-              ></a>
+              <a href={tag.link} style={{ fontSize: "1.2em" }}>
+                <Badge
+                  style={{
+                    background: tag.color,
+                    color: Color(tag.color).isDark() ? theme.light : theme.dark,
+                    margin: "0 3px",
+                  }}
+                >
+                  {tag.alt}
+                </Badge>
+              </a>
             </React.Fragment>
           ))}
         </div>
