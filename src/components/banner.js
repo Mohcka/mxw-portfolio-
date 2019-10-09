@@ -1,15 +1,17 @@
 import React from "react"
 import GeoPattern from "geopattern"
 
+import theme from "../theme"
+
 const Banner = () => {
   return (
     <div
       style={{
         backgroundImage: GeoPattern.generate("ok", {
           generator: "xes",
-          color: `#00d4ff`,
+          color: theme.primaryDark,
         }).toDataUrl(),
-        height: 500,
+        height: 300,
         width: "100%",
       }}
     >
@@ -22,11 +24,24 @@ const Banner = () => {
           alignItems: "center",
           height: "100%",
           width: "100%",
-          color: "white",
+          padding: '20px'
         }}
       >
-        <h2>Hello...</h2>
-        <h4>I am a...</h4>
+        <h2
+          style={{
+            color: "white",
+          }}
+        >
+          Hi, I'm Michael
+        </h2>
+        <h4
+          style={{
+            color: "white",
+          }}
+        >
+          I'm fascinated with the world of web development and creating next
+          generation web experiences
+        </h4>
       </div>
     </div>
   )

@@ -12,13 +12,18 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 // import "./layout.css"
 import Helmet from "react-helmet"
-import { createGlobalStyle, ThemeProvider } from "styled-components"
-
+import styled, { ThemeProvider } from "styled-components"
 import theme from "../theme"
 
-const GlobalStyle = createGlobalStyle`
+
+const GlobalStyle = styled.div`
   h1,h2,h3,h4,h5,h6,span,p,div{
-    font-color: #333;
+    color: ${props => props.theme.dark};
+  }
+
+  a {
+    color: ${props => props.theme.primaryDark} !important;
+    text-decoration: none !important;
   }
 `
 
@@ -35,24 +40,21 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <GlobalStyle>
         <Helmet>
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
             rel="stylesheet"
           ></link>
         </Helmet>
-        <GlobalStyle />
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <div>
           <main>{children}</main>
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © {new Date().getFullYear()}
           </footer>
         </div>
-      </>
+      </GlobalStyle>
     </ThemeProvider>
   )
 }
