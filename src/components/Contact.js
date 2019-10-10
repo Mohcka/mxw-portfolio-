@@ -5,14 +5,11 @@ const Contact = () => (
   <Container>
     <h2>Talk To Me</h2>
     <p>
-      You can either email me on
-      <a href="mailto:mikedules@yahoo.com">mikeduels@yahoo.com</a> or find me on
+      Feel free to <a href="mailto:mikedules@yahoo.com">email me</a> or look me
+      up on on <a href="https://github.com/Mohcka">Github</a> or{" "}
       <a href="https://www.linkedin.com/in/michael-walker-746b8597/">
         LinkedIn
       </a>
-    </p>
-    <p>
-      Also here's my <a href="https://github.com/Mohcka">Github</a>
     </p>
   </Container>
 )
