@@ -19,40 +19,49 @@ const StyledProjectsWrapper = styled.div`
         Color(props.theme.primary)
           .darken(0.4)
           .hex()} !important;
+        transition: color .3s;
+      &:hover {
+        color: ${props =>
+        Color(props.theme.primary)
+          .darken(0.6)
+          .hex()} !important;
+      }
     }
   }
 `
 
 const Project = props => (
   <Col sm={6} xs={12}>
-    <a href={props.projectInfo.link}>
-      <div className="project">
-        <div className="project-title">
-          <h3>{props.projectInfo.title}</h3>
-        </div>
-        <div
-          className="project-info"
-          dangerouslySetInnerHTML={{ __html: props.projectInfo.info }}
-        />
-        <div className="project-tag">
-          {props.projectInfo.tags.map((tag, i) => (
-            <React.Fragment key={i}>
-              <a href={tag.link} style={{ fontSize: "1.2em" }}>
-                <Badge
-                  style={{
-                    background: tag.color,
-                    color: Color(tag.color).isDark() ? theme.light : theme.dark,
-                    margin: "0 3px",
-                  }}
-                >
-                  {tag.alt}
-                </Badge>
-              </a>
-            </React.Fragment>
-          ))}
-        </div>
+    <div className="project">
+      <div className="project-title">
+        <h3>
+          {" "}
+          <a href={props.projectInfo.link}>{props.projectInfo.title}</a>
+        </h3>{" "}
       </div>
-    </a>
+
+      <div
+        className="project-info"
+        dangerouslySetInnerHTML={{ __html: props.projectInfo.info }}
+      />
+      <div className="project-tag">
+        {props.projectInfo.tags.map((tag, i) => (
+          <React.Fragment key={i}>
+            <a href={tag.link} style={{ fontSize: "1.2em" }}>
+              <Badge
+                style={{
+                  background: tag.color,
+                  color: Color(tag.color).isDark() ? theme.light : theme.dark,
+                  margin: "0 3px",
+                }}
+              >
+                {tag.alt}
+              </Badge>
+            </a>
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
   </Col>
 )
 
