@@ -12,6 +12,7 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 // import "./layout.css"
 import Helmet from "react-helmet"
+import { Container } from "react-bootstrap"
 import styled, { ThemeProvider } from "styled-components"
 import theme from "../theme"
 
@@ -50,9 +51,9 @@ const Layout = ({ children }) => {
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <div>
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}
-          </footer>
+          <Container>
+            <footer>© {new Date().getFullYear()}</footer>
+          </Container>
         </div>
       </GlobalStyle>
     </ThemeProvider>
