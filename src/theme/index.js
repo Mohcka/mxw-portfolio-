@@ -8,7 +8,7 @@ const theme = {
 }
 
 theme.primaryDark = Color(theme.primary)
-  .darken(0.4)
+  .darken(0.5)
   .hex()
 
 export default theme
