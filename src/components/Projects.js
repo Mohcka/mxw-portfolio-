@@ -9,29 +9,39 @@ import projectData from "../data/projects"
 
 const StyledProjectsWrapper = styled.div`
   .project {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     margin: 10px 0;
     padding: 20px;
     background-color: ${props => props.theme.light};
+
+    .project-info{ 
+      margin-bottom: 10px;
+    }
+
+    .project-tags{
+      margin-top: auto;
+    }
 
     a {
       color: ${props =>
         Color(props.theme.primary)
           .darken(0.4)
           .hex()} !important;
-        transition: color .3s;
+      transition: color 0.3s;
       &:hover {
         color: ${props =>
-        Color(props.theme.primary)
-          .darken(0.6)
-          .hex()} !important;
+          Color(props.theme.primary)
+            .darken(0.6)
+            .hex()} !important;
       }
     }
   }
 `
 
 const Project = props => (
-  <Col sm={6} xs={12}>
+  <Col sm={6} xs={12} style={{ display: "flex" }}>
     <div className="project">
       <div className="project-title">
         <h3>
@@ -50,7 +60,7 @@ const Project = props => (
         className="project-info"
         dangerouslySetInnerHTML={{ __html: props.projectInfo.info }}
       />
-      <div className="project-tag">
+      <div className="project-tags">
         {props.projectInfo.tags.map((tag, i) => (
           <React.Fragment key={i}>
             <a
