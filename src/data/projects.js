@@ -86,8 +86,9 @@ export default {
     },
     {
       title: "Browser Automation App",
-      info: `I used <a href="https://www.seleniumhq.org/">Selenium</a> 
-      and <a href="https://electronjs.org/">Electronjs</a> to make a 
+      info: `I used 
+      <a href="https://www.seleniumhq.org/ target="_blank" target="_blank" rel="noopener noreferrer">Selenium</a> 
+      and <a href="https://electronjs.org/" target="_blank" target="_blank" rel="noopener noreferrer">Electronjs</a> to make a 
       redistributable app to help my coworkers automate their everyday tasks.`,
       link: "https://github.com/Mohcka/browser-automation-app",
       tags: [tags.selenium, tags.electron],
@@ -96,14 +97,14 @@ export default {
       title: "MERN Stack Reddit-Clone",
       info: `A react app that mimicks certain functionalities from reddit.  
       Backend uses <a href="https://expressjs.com">Expressjs</a> and 
-      <a href="https://www.mongodb.com/">Mongodb.</a>`,
+      <a href="https://www.mongodb.com/" target="_blank" target="_blank" rel="noopener noreferrer">Mongodb.</a>`,
       link: "https://mern-reddit-clone.herokuapp.com/",
       tags: [tags.mongo, tags.express, tags.react, tags.node, tags.heroku],
     },
     {
       title: "React Carousel",
       info: `A carousel I made with reusable components from React and custom animations from
-      <a href="https://animejs.com/" target="_blank">
+      <a href="https://animejs.com/" target="_blank" target="_blank" rel="noopener noreferrer">
         animejs
       </a>`,
       link: "https://stackblitz.com/edit/mohcka-react-carousel",
@@ -112,8 +113,8 @@ export default {
     {
       title: "Discord Music Bot",
       info: `Music bot I made to use on discord with a few friends.
-       Uses <a href="https://discord.js.org/#/">discordjs</a> and 
-       <a href="https://developers.google.com/youtube/v3">YouTube's API</a>`,
+       Uses <a href="https://discord.js.org/#/" target="_blank" target="_blank" rel="noopener noreferrer">discordjs</a> and 
+       <a href="https://developers.google.com/youtube/v3" target="_blank" target="_blank" rel="noopener noreferrer">YouTube's API</a>`,
       link: "https://github.com/Mohcka/discord-music-bot",
       tags: [tags.youtube, tags.discord],
     },

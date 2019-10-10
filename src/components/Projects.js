@@ -36,7 +36,13 @@ const Project = props => (
       <div className="project-title">
         <h3>
           {" "}
-          <a href={props.projectInfo.link}>{props.projectInfo.title}</a>
+          <a
+            href={props.projectInfo.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.projectInfo.title}
+          </a>
         </h3>{" "}
       </div>
 
@@ -47,7 +53,12 @@ const Project = props => (
       <div className="project-tag">
         {props.projectInfo.tags.map((tag, i) => (
           <React.Fragment key={i}>
-            <a href={tag.link} style={{ fontSize: "1.2em" }}>
+            <a
+              href={tag.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: "1.2em" }}
+            >
               <Badge
                 style={{
                   background: tag.color,
