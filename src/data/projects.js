@@ -67,14 +67,21 @@ const tags = {
     color: "#B7B7B7",
     alt: "ExpressJS",
   },
+  animejs: {
+    icon: "",
+    link: "#",
+    color: "#FF4B4B",
+    alt: "AnimeJS"
+  },
 }
 
 export default {
   projects: [
     {
-      title: "Gatsby Starter Netlify CMS Landing-page",
-      info: `Gatsby Starter Netlify CMS Landing-page`,
-      link: "https://gatsby-starter-netlify-cms-landing-page.netlify.com/",
+      title: "Gatsby Starter Netlify CMS Landing Page",
+      info: `A gatbsy starter i made as an example on how to use Netlify CMS to create a
+      landing page with flexible editing`,
+      link: "https://github.com/Mohcka/gatsby-starter-netlify-cms-landing-page",
       tags: [tags.gatsby, tags.netlify, tags.react],
     },
     {
@@ -100,7 +107,7 @@ export default {
         animejs
       </a>`,
       link: "https://stackblitz.com/edit/mohcka-react-carousel",
-      tags: [tags.react],
+      tags: [tags.react, tags.animejs],
     },
     {
       title: "Discord Music Bot",
