@@ -2,6 +2,7 @@ import theme from "../theme"
 
 const tags = {
   webpack: {
+    icon: "",
     link: "https://webpack.js.org/",
     color: "#1C78C0",
     alt: "Webpack",
@@ -23,6 +24,12 @@ const tags = {
     link: "https://reactjs.org/",
     color: "#663399",
     alt: "Gatsby",
+  },
+  graphql: {
+    icon: `<i class="fab fa-react"></i>`,
+    link: "https://graphql.org/",
+    color: "#E535AB",
+    alt: "GraphQL",
   },
   heroku: {
     icon: `<i class="fab fa-react"></i>`,
@@ -87,7 +94,7 @@ export default {
       info: `A gatbsy starter i made as an example on how to use Netlify CMS to create a
       landing page with flexible editing`,
       link: "https://github.com/Mohcka/gatsby-starter-netlify-cms-landing-page",
-      tags: [tags.gatsby, tags.netlify, tags.react],
+      tags: [tags.gatsby, tags.netlify, tags.react, tags.graphql],
     },
     {
       title: "Browser Automation App",
