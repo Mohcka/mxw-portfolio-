@@ -1,6 +1,11 @@
 import theme from "../theme"
 
 const tags = {
+  webpack: {
+    link: "https://webpack.js.org/",
+    color: "#1C78C0",
+    alt: "Webpack",
+  },
   react: {
     icon: `<i class="fab fa-react"></i>`,
     link: "https://reactjs.org/",
@@ -71,7 +76,7 @@ const tags = {
     icon: "",
     link: "#",
     color: "#FF4B4B",
-    alt: "AnimeJS"
+    alt: "AnimeJS",
   },
 }
 
@@ -99,7 +104,14 @@ export default {
       Backend uses <a href="https://expressjs.com">Expressjs</a> and 
       <a href="https://www.mongodb.com/" target="_blank" target="_blank" rel="noopener noreferrer">Mongodb.</a>`,
       link: "https://mern-reddit-clone.herokuapp.com/",
-      tags: [tags.mongo, tags.express, tags.react, tags.node, tags.heroku],
+      tags: [
+        tags.mongo,
+        tags.express,
+        tags.react,
+        tags.node,
+        tags.webpack,
+        tags.heroku,
+      ],
     },
     {
       title: "React Carousel",
