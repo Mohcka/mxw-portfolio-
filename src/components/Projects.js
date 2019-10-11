@@ -16,19 +16,16 @@ const StyledProjectsWrapper = styled.div`
     padding: 20px;
     background-color: ${props => props.theme.light};
 
-    .project-info{ 
+    .project-info {
       margin-bottom: 10px;
     }
 
-    .project-tags{
+    .project-tags {
       margin-top: auto;
     }
 
     a {
-      color: ${props =>
-        Color(props.theme.primary)
-          .darken(0.4)
-          .hex()} !important;
+      color: ${props => props.theme.primaryDark} !important;
       transition: color 0.3s;
       &:hover {
         color: ${props =>
