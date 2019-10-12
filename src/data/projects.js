@@ -71,7 +71,7 @@ const tags = {
     icon: "",
     link: "#",
     color: "#FF4B4B",
-    alt: "AnimeJS"
+    alt: "AnimeJS",
   },
 }
 
@@ -85,6 +85,14 @@ export default {
       tags: [tags.gatsby, tags.netlify, tags.react],
     },
     {
+      title: "MERN Stack Reddit-Clone",
+      info: `A react app that mimicks certain functionalities from reddit.  
+      Backend uses <a href="https://expressjs.com">Expressjs</a> and 
+      <a href="https://www.mongodb.com/" target="_blank" target="_blank" rel="noopener noreferrer">Mongodb.</a>`,
+      link: "https://mern-reddit-clone.herokuapp.com/",
+      tags: [tags.mongo, tags.express, tags.react, tags.node, tags.heroku],
+    },
+    {
       title: "Browser Automation App",
       info: `I used 
       <a href="https://www.seleniumhq.org/ target="_blank" target="_blank" rel="noopener noreferrer">Selenium</a> 
@@ -92,14 +100,6 @@ export default {
       redistributable app to help my coworkers automate their everyday tasks.`,
       link: "https://github.com/Mohcka/browser-automation-app",
       tags: [tags.selenium, tags.electron],
-    },
-    {
-      title: "MERN Stack Reddit-Clone",
-      info: `A react app that mimicks certain functionalities from reddit.  
-      Backend uses <a href="https://expressjs.com">Expressjs</a> and 
-      <a href="https://www.mongodb.com/" target="_blank" target="_blank" rel="noopener noreferrer">Mongodb.</a>`,
-      link: "https://mern-reddit-clone.herokuapp.com/",
-      tags: [tags.mongo, tags.express, tags.react, tags.node, tags.heroku],
     },
     {
       title: "React Carousel",
