@@ -16,9 +16,31 @@ import { Container } from "react-bootstrap"
 import styled, { ThemeProvider } from "styled-components"
 import theme from "../theme"
 
-
 const GlobalStyle = styled.div`
-  h1,h2,h3,h4,h5,h6,span,p,div{
+  * {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI,
+      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Signika", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  p,
+  div {
     color: ${props => props.theme.dark};
   }
 
@@ -45,6 +67,10 @@ const Layout = ({ children }) => {
         <Helmet>
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+            rel="stylesheet"
+          ></link>
+          <link
+            href="https://fonts.googleapis.com/css?family=Montserrat|Righteous|Signika&display=swap"
             rel="stylesheet"
           ></link>
         </Helmet>

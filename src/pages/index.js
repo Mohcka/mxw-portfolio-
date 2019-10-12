@@ -25,7 +25,7 @@ const StyledIndexWrapper = styled.div`
 const IndexPage = () => (
   <Layout>
     <StyledIndexWrapper>
-      <SEO title="Home" />
+      <SEO title="Welcome" />
       <Banner />
       <div className="section">
         <Projects />

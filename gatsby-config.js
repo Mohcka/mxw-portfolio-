@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Netlify CMS Landing Page`,
-    description: `A simple landing page with CMS functionality from Netlify CMS`,
+    title: `Michael's Portfolio`,
+    description: `Check out my portfolio!`,
     author: `@mohcka`,
   },
   plugins: [

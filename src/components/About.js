@@ -1,8 +1,18 @@
 import React from "react"
 import { Container } from "react-bootstrap"
+import styled from "styled-components"
+
+const StyledAboutWrapper = styled.div`
+  .about {
+    h2,
+    h4 {
+      margin: 20px 0;
+    }
+  }
+`
 
 const About = () => (
-  <>
+  <StyledAboutWrapper>
     <Container className="about">
       <h2>About Me...</h2>
       <h4>
@@ -26,7 +36,7 @@ const About = () => (
         </p>
       </p>
     </Container>
-  </>
+  </StyledAboutWrapper>
 )
 
 export default About
