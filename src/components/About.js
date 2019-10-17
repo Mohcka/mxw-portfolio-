@@ -24,9 +24,9 @@ const About = () => (
         <p>
           I'm a young and motivated web devloper who loves to play around with
           the latest and greatest programming languages (Java, javascript, php,
-          Ruby and Python) and technologies (SQL, AJAX, React, Git, CLIs) to
+          Ruby and Python) and technologies (SQL, AJAX, RESTful API, React, Git, CLIs) to
           create astounding and performant web experiences. I've knowledge of
-          many of the best coding practices and tools creating RESTful web
+          many of the best coding practices and tools for creating web
           applications from both the front end and back.
         </p>
         <p>
