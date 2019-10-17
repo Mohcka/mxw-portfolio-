@@ -28,11 +28,10 @@ const About = () => (
           time I started learning javascript and web development on the side.
         </p>
         <p>
-          I currently work as a web developer at my company, building websites
-          with a CMS to create user friendly websites for our clients. I'm also
-          working on creating tools to automate tasks for my coworkers as well
-          as developing a static site generator with Gatsby that will utilize a
-          CMS to replace the one we're currently using.
+          I currently work as a web developer at my company, building engaging
+          web experiences with WordPress. I also occasionally write programs 
+          that handle the data we use everyday that takes advantage of several
+          APIs of the services we use.
         </p>
       </p>
     </Container>
