@@ -5,6 +5,7 @@ const theme = {
   secondary: "#FF3B3F",
   light: "#EFEFEF",
   dark: "#333",
+  textLight: "#EEE"
 }
 
 theme.primaryDark = Color(theme.primary)

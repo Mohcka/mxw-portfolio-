@@ -11,7 +11,6 @@ import PropTypes from "prop-types"
 
 // import Header from "./header"
 // import "./layout.css"
-import Helmet from "react-helmet"
 import { Container } from "react-bootstrap"
 import styled, { ThemeProvider } from "styled-components"
 import theme from "../theme"
@@ -51,29 +50,9 @@ const GlobalStyle = styled.div`
 `
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle>
-        <Helmet>
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-            rel="stylesheet"
-          ></link>
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat|Righteous|Signika&display=swap"
-            rel="stylesheet"
-          ></link>
-        </Helmet>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <div>
           <main>{children}</main>

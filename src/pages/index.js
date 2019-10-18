@@ -10,11 +10,17 @@ import SEO from "../components/seo"
 import About from "../components/About"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
+import Banner2 from "../components/banner-v2"
 
 const Banner = Loadable({
   loader: () => import("../components/banner"),
   loading: () => <div className="">Loading...</div>,
 })
+
+// const Banner2 = Loadable({
+//   loader: () => import("../components/banner-v2"),
+//   loading: () => <div className="">Loading...</div>,
+// })
 
 const StyledIndexWrapper = styled.div`
   .section {
@@ -26,7 +32,7 @@ const IndexPage = () => (
   <Layout>
     <StyledIndexWrapper>
       <SEO title="Welcome" />
-      <Banner />
+      <Banner2 />
       <div className="section">
         <Projects />
       </div>
