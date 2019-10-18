@@ -78,7 +78,8 @@ const Banner = () => {
               color: "white",
             }}
           >
-            I'm developing <AnimTextList textList={techList} /> things
+            I'm an inspired web developer creating{" "}
+            <AnimTextList textList={techList} /> things
           </h4>
         </div>
       </StyledBanner>
