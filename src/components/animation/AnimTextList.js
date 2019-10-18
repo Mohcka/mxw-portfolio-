@@ -5,7 +5,16 @@ import styled from "styled-components"
 import anime from "animejs"
 
 const StyledTextList = styled.span`
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: -5px;
+  font-family: "Monsterrat", arial;
+  font-weight: bold;
+
   .letter {
+    display: inline-block;
+    line-height: 1em;
     color: ${props => props.theme.textLight};
   }
 `

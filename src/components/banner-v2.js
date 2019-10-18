@@ -1,11 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Loadable from "react-loadable"
-import GeoPattern from "geopattern"
-
-import theme from "../theme"
-import anime from "animejs"
-
-import styled from "styled-components"
 
 const AnimTextList = Loadable({
   loader: () => import("./animation/AnimTextList"),
@@ -14,30 +8,11 @@ const AnimTextList = Loadable({
 
 const GeoBackground = Loadable({
   loader: () => import("./UI/GeoBackground"),
+  // eslint-disable-next-line react/prop-types
   loading: ({ children }) => (
     <div style={{ background: "red" }}>{children}</div>
   ),
 })
-
-const StyledBanner = styled.header`
-  height: 400px;
-  color: white;
-  // background: rgba(255, 0, 0, 0.3);
-
-  .text-wrapper {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    margin-bottom: -5px;
-    font-family: "Monsterrat", arial;
-    font-weight: bold;
-  }
-
-  .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
-`
 
 const Banner = () => {
   const techList = [
@@ -48,12 +23,12 @@ const Banner = () => {
     "NodeJS",
     "Java",
     "NoSQL",
-    "Static Websites",
+    "Static Website",
   ]
 
   return (
     <GeoBackground>
-      <StyledBanner>
+      <div style={{ height: 400, color: "white" }}>
         <div
           className="intro"
           style={{
@@ -79,10 +54,10 @@ const Banner = () => {
             }}
           >
             I'm an inspired web developer creating{" "}
-            <AnimTextList textList={techList} /> things
+            <AnimTextList textList={techList} /> applications
           </h4>
         </div>
-      </StyledBanner>
+      </div>
     </GeoBackground>
   )
 }
