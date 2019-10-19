@@ -26,12 +26,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `My Portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#3a707b`,
+        theme_color: `#3a707b`,
         icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
@@ -39,9 +38,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: [
-            "Montserrat:500,600,700,800",
-          ],
+          families: ["Montserrat:500,600,700,800"],
         },
       },
     },
