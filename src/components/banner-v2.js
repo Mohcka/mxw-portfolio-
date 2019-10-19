@@ -21,9 +21,42 @@ const ParticlesBG = Loadable({
 })
 
 const StyledBanner = styled.div`
-  height: 400px;
+  display: flex;
+  align-items: center;
+  min-height: 400px;
   color: white;
   position: relative;
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+  }
+
+  .title {
+    color: white;
+    font-weight: 700;
+    font-size: 3em;
+  }
+  .subtitle {
+    font-weight: 600;
+    font-size: 1.4em;
+
+    & > span {
+      display: inline-block;
+      color: white;
+      width: 350px;
+    }
+
+    .techlist-container {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
 
   .background {
     background-color: ${props => props.theme.primaryDark};
@@ -40,24 +73,37 @@ const StyledBanner = styled.div`
   }
 
   @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
-    .tech-list {
-      display: block;
+    .intro {
+      padding: 20px;
+      text-align: center;
     }
+
+    .title {
+      font-size: 2.5em;
+    }
+
+    .subtitle {
+      font-size: 1.3em;
+      width: 100%;
+    }
+
+    .tech-list {
+      display: block !important;
+      text-align: center;
   }
 `
 
 const Banner = () => {
   const techList = [
     "javascript",
+    "Responsive Layouts",
     "React",
+    "Webpack",
+    "RESTful APIs",
     "SQL",
     "AJAX",
     "NodeJS",
     "Java",
-    "NoSQL",
-    "Static Site Generators",
-    "RESTful APIs",
-    "Responsive Layouts"
   ]
 
   const [headerBG, setHeaderBG] = useState(<BG />)
@@ -92,36 +138,20 @@ const Banner = () => {
   return (
     <StyledBanner>
       {headerBG}
-      <div
-        className="intro"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100%",
-          width: "100%",
-          padding: "20px",
-        }}
-      >
-        <h2
-          style={{
-            color: "white",
-            fontWeight: "700",
-            fontSize: "3em"
-          }}
-        >
+      <div className="intro" style={{}}>
+        <h2 className="title" style={{}}>
           Hi, I'm Michael
         </h2>
-        <h4
-          style={{
-            color: "white",
-            textAlign: "center",
-            fontWeight: "600"
-          }}
-        >
-          I'm a full-stack web developer creating next gen web apps using powerful tools and best practices such as{" "}
-          <AnimTextList textList={techList} className="tech-list" />
+        <h4 className="subtitle" style={{}}>
+          <span>I create web apps using the best practices and coding</span>{" "}
+          <span className="techlist-container">
+            standards such as{" "}
+            <AnimTextList textList={techList} className="tech-list" />
+          </span>
+          <span>
+            I love to code and design next gen web applications for the growing
+            industry
+          </span>
         </h4>
       </div>
     </StyledBanner>
