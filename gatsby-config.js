@@ -40,16 +40,13 @@ module.exports = {
       options: {
         google: {
           families: [
-            "Droid Sans",
-            "Droid Serif",
             "Montserrat:500,600,700,800",
-            "Oswald:500,700",
           ],
         },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
