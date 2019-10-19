@@ -132,6 +132,7 @@ const Banner = () => {
     "javascript",
     "Responsive Design",
     "React",
+    "Wordpress",
     "Webpack",
     "RESTful APIs",
     "SQL",
