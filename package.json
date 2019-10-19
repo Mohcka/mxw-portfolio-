@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "my-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Check out my portfolio! :)",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Michael Walker <mikeduels@yahoo.com>",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "animejs": "^3.1.0",
