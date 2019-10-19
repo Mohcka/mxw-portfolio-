@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Loadable from "react-loadable"
+import { breakpoints } from "../theme"
 import styled from "styled-components"
 
 const AnimTextList = Loadable({
@@ -7,16 +8,16 @@ const AnimTextList = Loadable({
   loading: () => <span style={{ color: "white", opacity: 0 }}>javascript</span>,
 })
 
-// const GeoBackground = Loadable({
-//   loader: () => import("./UI/GeoBackground"),
-//   loading: () => (
-//     <div className="background"></div>
-//   ),
-// })
+const BG = () => <div className="background" />
+
+const GeoBackground = Loadable({
+  loader: () => import("./UI/GeoBackground"),
+  loading: () => <BG />,
+})
 
 const ParticlesBG = Loadable({
   loader: () => import("./UI/PartclesBackground"),
-  loading: () => <div className="background"></div>
+  loading: () => <BG />,
 })
 
 const StyledBanner = styled.div`
@@ -47,9 +48,38 @@ const Banner = () => {
     "Static Website",
   ]
 
+  const [headerBG, setHeaderBG] = useState(<BG />)
+
+  useEffect(() => {
+    let viewportWidth =
+      window.innerWidth || document.documentElement.clientWidth
+
+    if (viewportWidth > breakpoints.md)
+      setHeaderBG(<ParticlesBG className="background" />)
+    else setHeaderBG(<GeoBackground className="background" />)
+
+    // Create a timeout that will delay the resize event for performance
+    let timeout
+    window.addEventListener("resize", () => {
+      viewportWidth = window.innerWidth || document.documentElement.clientWidth
+
+      if (!timeout) {
+        timeout = setTimeout(() => {
+          // reset timeout
+          timeout = null
+
+          // run resize functions
+          if (viewportWidth > breakpoints.md)
+            setHeaderBG(<ParticlesBG className="background" />)
+          else setHeaderBG(<GeoBackground className="background" />)
+        }, 200)
+      }
+    })
+  }, [])
+
   return (
     <StyledBanner>
-      <ParticlesBG className="background" />
+      {headerBG}
       <div
         className="intro"
         style={{
