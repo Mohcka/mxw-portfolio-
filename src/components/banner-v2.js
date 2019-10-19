@@ -56,7 +56,13 @@ const StyledBanner = styled.div`
   }
 
   .background {
-    background-color: ${props => props.theme.primaryDark};
+    background: linear-gradient(150deg, #3a707b, #2c9bb2);
+    background-size: 400% 400%;
+
+    -webkit-animation: BGAnimGradient 15s ease infinite;
+    -moz-animation: BGAnimGradient 15s ease infinite;
+    -o-animation: BGAnimGradient 15s ease infinite;
+    animation: BGAnimGradient 15s ease infinite;
     position: absolute;
     top: 0;
     left: 0;
@@ -70,10 +76,39 @@ const StyledBanner = styled.div`
     width: 250px;
   }
 
+  @-webkit-keyframes BGAnimGradient {
+      0%{background-position:18% 0%}
+      50%{background-position:83% 100%}
+      100%{background-position:18% 0%}
+  }
+  @-moz-keyframes BGAnimGradient {
+      0%{background-position:18% 0%}
+      50%{background-position:83% 100%}
+      100%{background-position:18% 0%}
+  }
+  @-o-keyframes BGAnimGradient {
+      0%{background-position:18% 0%}
+      50%{background-position:83% 100%}
+      100%{background-position:18% 0%}
+  }
+  @keyframes BGAnimGradient {
+      0%{background-position:18% 0%}
+      50%{background-position:83% 100%}
+      100%{background-position:18% 0%}
+  }
+
   @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
     .intro {
       padding: 20px;
       text-align: center;
+    }
+
+    .background {
+      background-size: auto;
+      -webkit-animation: none;
+      -moz-animation: none;
+      -o-animation: none;
+      animation: none;
     }
 
     .title {
