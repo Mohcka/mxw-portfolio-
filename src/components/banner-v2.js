@@ -34,6 +34,16 @@ const StyledBanner = styled.div`
     width: 100%;
     z-index: -10;
   }
+
+  .tech-list {
+    display: inline-block;
+  }
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
+    .tech-list {
+      display: block;
+    }
+  }
 `
 
 const Banner = () => {
@@ -45,7 +55,9 @@ const Banner = () => {
     "NodeJS",
     "Java",
     "NoSQL",
-    "Static Website",
+    "Static Site Generators",
+    "RESTful APIs",
+    "Responsive Layouts"
   ]
 
   const [headerBG, setHeaderBG] = useState(<BG />)
@@ -95,6 +107,8 @@ const Banner = () => {
         <h2
           style={{
             color: "white",
+            fontWeight: "700",
+            fontSize: "3em"
           }}
         >
           Hi, I'm Michael
@@ -102,10 +116,12 @@ const Banner = () => {
         <h4
           style={{
             color: "white",
+            textAlign: "center",
+            fontWeight: "600"
           }}
         >
-          I'm an inspired web developer creating{" "}
-          <AnimTextList textList={techList} /> applications
+          I'm a full-stack web developer creating next gen web apps using powerful tools and best practices such as{" "}
+          <AnimTextList textList={techList} className="tech-list" />
         </h4>
       </div>
     </StyledBanner>
