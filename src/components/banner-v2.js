@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Container } from "react-bootstrap"
 import Loadable from "react-loadable"
 import { breakpoints } from "../theme"
 import styled from "styled-components"
@@ -27,6 +28,8 @@ const StyledBanner = styled.div`
   color: white;
   position: relative;
 
+  
+
   .intro {
     display: flex;
     flex-direction: column;
@@ -44,11 +47,11 @@ const StyledBanner = styled.div`
   .subtitle {
     font-weight: 600;
     font-size: 1.4em;
+    max-width: 600px;
 
     & > span {
       display: inline-block;
       color: white;
-      width: 350px;
     }
 
     .techlist-container {
@@ -70,6 +73,7 @@ const StyledBanner = styled.div`
 
   .tech-list {
     display: inline-block;
+    width: 250px;
   }
 
   @media screen and (max-width: ${props => props.theme.breakpoints.md}px) {
@@ -90,18 +94,18 @@ const StyledBanner = styled.div`
     .tech-list {
       display: block !important;
       text-align: center;
+      margin: 0 auto;
   }
 `
 
 const Banner = () => {
   const techList = [
     "javascript",
-    "Responsive Layouts",
+    "Responsive Design",
     "React",
     "Webpack",
     "RESTful APIs",
     "SQL",
-    "AJAX",
     "NodeJS",
     "Java",
   ]
@@ -138,22 +142,21 @@ const Banner = () => {
   return (
     <StyledBanner>
       {headerBG}
-      <div className="intro" style={{}}>
+      <Container className="intro" style={{}}>
         <h2 className="title" style={{}}>
           Hi, I'm Michael
         </h2>
         <h4 className="subtitle" style={{}}>
-          <span>I create web apps using the best practices and coding</span>{" "}
-          <span className="techlist-container">
-            standards such as{" "}
-            <AnimTextList textList={techList} className="tech-list" />
+          <span style={{ marginBottom: 25 }}>
+            I create web apps using the best practices and coding standards such
+            as <AnimTextList textList={techList} className="tech-list" />
           </span>
           <span>
             I love to code and design next gen web applications for the growing
             industry
           </span>
         </h4>
-      </div>
+      </Container>
     </StyledBanner>
   )
 }
