@@ -38,7 +38,7 @@ const StyledProjectsWrapper = styled.div`
 `
 
 const Project = props => (
-  <Col sm={6} xs={12} style={{ display: "flex" }}>
+  <Col md={6} xs={12} style={{ display: "flex" }}>
     <div className="project">
       <div className="project-title">
         <h3>
