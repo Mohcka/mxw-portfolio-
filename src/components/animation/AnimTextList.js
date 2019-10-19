@@ -27,6 +27,7 @@ class AnimTechList extends Component {
 
   static propTypes = {
     textList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    className: PropTypes.string,
   }
 
   componentDidMount() {
@@ -84,7 +85,7 @@ class AnimTechList extends Component {
 
   render() {
     return (
-      <StyledTextList className="text-wrapper">
+      <StyledTextList className={`text-wrapper ${this.props.className}`}>
         <span className="letters">{this.state.tech}</span>
       </StyledTextList>
     )
