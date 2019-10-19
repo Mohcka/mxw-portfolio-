@@ -36,7 +36,7 @@ const StyledBanner = styled.div`
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding: 100px;
+    padding: 100px 15px;
   }
 
   .title {
@@ -132,12 +132,13 @@ const Banner = () => {
     "javascript",
     "Responsive Design",
     "React",
-    "Wordpress",
+    "Git",
     "Webpack",
     "PHP",
     "RESTful APIs",
     "SQL",
     "NodeJS",
+    "Wordpress",
     "Java",
   ]
 
