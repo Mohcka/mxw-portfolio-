@@ -53,12 +53,6 @@ const StyledBanner = styled.div`
       display: inline-block;
       color: white;
     }
-
-    .techlist-container {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
   }
 
   .background {
@@ -147,7 +141,7 @@ const Banner = () => {
           Hi, I'm Michael
         </h2>
         <h4 className="subtitle" style={{}}>
-          <span style={{ marginBottom: 25 }}>
+          <span style={{ marginBottom: 20 }}>
             I create web apps using the best practices and coding standards such
             as <AnimTextList textList={techList} className="tech-list" />
           </span>
