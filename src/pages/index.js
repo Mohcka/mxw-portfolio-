@@ -26,6 +26,12 @@ const StyledIndexWrapper = styled.div`
   .section {
     margin: 100px 0;
   }
+
+  @media screen and (max-width: ${props => props.theme.breakpoints.sm}px){
+    .section {
+      margin: 50px 0;
+    }
+  }
 `
 
 const IndexPage = () => (
