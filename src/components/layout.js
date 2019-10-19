@@ -12,10 +12,10 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 // import "./layout.css"
 import { Container } from "react-bootstrap"
-import styled, { ThemeProvider } from "styled-components"
+import styled, { ThemeProvider,  createGlobalStyle} from "styled-components"
 import theme from "../theme"
 
-const GlobalStyle = styled.div`
+const GlobalStyle = createGlobalStyle`
   * {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI,
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -47,12 +47,20 @@ const GlobalStyle = styled.div`
     color: ${props => props.theme.primaryDark} !important;
     text-decoration: none !important;
   }
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+    html, body {
+      // background: red !important;
+      // font-size: 0.8em;
+    }
+  }
 `
 
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle>
+      <>
+        <GlobalStyle />
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <div>
           <main>{children}</main>
@@ -60,7 +68,7 @@ const Layout = ({ children }) => {
             <footer>© {new Date().getFullYear()}</footer>
           </Container>
         </div>
-      </GlobalStyle>
+      </>
     </ThemeProvider>
   )
 }
