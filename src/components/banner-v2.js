@@ -180,8 +180,8 @@ const Banner = () => {
         </h2>
         <h4 className="subtitle" style={{}}>
           <span style={{ marginBottom: 20 }}>
-            I create web apps using the best practices and coding standards such
-            as <AnimTextList textList={techList} className="tech-list" />
+            I create web apps using the best practices and technologies such as{" "}
+            <AnimTextList textList={techList} className="tech-list" />
           </span>
           <span>
             I love to code and design next gen web applications for the growing
