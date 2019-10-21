@@ -134,6 +134,7 @@ const Banner = () => {
     "React",
     "Git",
     "Webpack",
+    "Babel",
     "PHP",
     "RESTful APIs",
     "SQL",
