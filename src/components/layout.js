@@ -12,7 +12,7 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 // import "./layout.css"
 import { Container } from "react-bootstrap"
-import styled, { ThemeProvider,  createGlobalStyle} from "styled-components"
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components"
 import theme from "../theme"
 
 const GlobalStyle = createGlobalStyle`
@@ -65,7 +65,12 @@ const Layout = ({ children }) => {
         <div>
           <main>{children}</main>
           <Container>
-            <footer>© {new Date().getFullYear()}</footer>
+            <footer>
+              © {new Date().getFullYear()} Made with{" "}
+              <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwi48cO2oKznAhVGT6wKHYLcBvUQFjAAegQIDhAC&url=https%3A%2F%2Fwww.gatsbyjs.org%2F&usg=AOvVaw3YGLYdktfdYZdII2w8qLkD">
+                Gatsby
+              </a>
+            </footer>
           </Container>
         </div>
       </>
