@@ -129,18 +129,18 @@ const StyledBanner = styled.div`
 
 const Banner = () => {
   const techList = [
+    "Webpack",
+    "NodeJS",
     "javascript",
     "TypeScript",
     "WebVR",
     "Responsive Design",
     "React",
     "Git",
-    "Webpack",
     "Babel",
     "PHP",
     "RESTful APIs",
     "SQL",
-    "NodeJS",
     "Wordpress",
     "Java",
   ]
