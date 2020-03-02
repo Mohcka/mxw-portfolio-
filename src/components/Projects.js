@@ -8,6 +8,15 @@ import Color from "color"
 import projectData from "../data/projects"
 
 const StyledProjectsWrapper = styled.div`
+  .projects-title {
+    font-weight: bold;
+    color: ${props =>
+      Color(props.theme.primary)
+        .darken(0.6)
+        .hex()};
+    margin-bottom: 20px;
+  }
+
   .project {
     display: flex;
     flex-direction: column;
@@ -102,11 +111,22 @@ const Projects = () => (
   <StyledProjectsWrapper>
     <Container>
       <Row>
+        <Col>
+          <h2 className="projects-title">Some projects of mine...</h2>
+        </Col>
+      </Row>
+      <Row>
         {projectData.projects.map((project, i) => (
           <React.Fragment key={i}>
             <Project projectInfo={project} />
           </React.Fragment>
         ))}
+      </Row>
+      <Row>
+        <Col style={{ paddingTop: 10, fontSize: "1.3em" }}>
+          Check out my my &nbsp;<a href="https://github.com/Mohcka">Github</a>
+          &nbsp;to see what else I've been working on as of late...
+        </Col>
       </Row>
     </Container>
   </StyledProjectsWrapper>
