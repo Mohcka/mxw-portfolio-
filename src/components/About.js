@@ -37,9 +37,9 @@ const About = () => (
         </p>
         <p>
           I currently work as a web developer at my company, building engaging
-          web experiences with WordPress. I also occasionally write programs
-          that handle the data we use everyday that takes advantage of several
-          APIs of the services we use.
+          web experiences with WordPress, creating programs to assist with our
+          everyday workflow and utilizing APIs such as AWS and Googleapis to
+          boost our performance and production.
         </p>
       </div>
     </Container>
