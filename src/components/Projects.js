@@ -124,7 +124,7 @@ const Projects = () => (
       </Row>
       <Row>
         <Col style={{ paddingTop: 10, fontSize: "1.3em" }}>
-          Check out my my &nbsp;<a href="https://github.com/Mohcka">Github</a>
+          Check out my &nbsp;<a href="https://github.com/Mohcka">Github</a>
           &nbsp;to see what else I've been working on as of late...
         </Col>
       </Row>
